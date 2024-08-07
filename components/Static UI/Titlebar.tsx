@@ -43,10 +43,10 @@ const Titlebar: FunctionComponent = () => {
     }, []);
 
     return (
-        <nav className="titlebar w-full h-10 bg-text/[2.5%] border-b border-text/10 flex items-center px-2 justify-between" data-tauri-drag-region>
-            <h1 className="text-text/50 font-bold pointer-events-none flex items-center gap-x-2">
+        <nav className="titlebar w-full h-8 bg-text/[2.5%] border-b border-text/10 flex items-center justify-between " data-tauri-drag-region>
+            <h1 className="text-text/50 text-xs font-bold pointer-events-none flex items-center gap-x-2 ml-2">
                 {/* Icon */}
-                <CalendarDots size={25} className="text-primary" />
+                <CalendarDots size={20} className="text-primary" />
 
                 {/* Title*/}
                 <span>
@@ -55,16 +55,15 @@ const Titlebar: FunctionComponent = () => {
             </h1>
 
             {/* Titlebar controls */}
-            <section className="flex space-x-2">
-
+            <section className="flex space-x-2 ">
                 <section ref={minimizeRef} id="titlebar-minimize">
-                    <Minus size={20} weight="bold" className="text-green-500 hover:text-green-700 cursor-pointer" alt="minimize" />
+                    <Minus size={17.5} weight="bold" className="w-full h-full p-2 text-green-500 hover:bg-green-700 hover:text-text cursor-pointer" />
                 </section>
                 <section ref={maximizeRef} id="titlebar-maximize">
-                    <Rectangle size={20} weight="bold" className="text-yellow-500 hover:text-yellow-700 cursor-pointer" alt="minimize" />
+                    <Rectangle size={17.5} weight="bold" className="w-full h-full text-yellow-500 p-2 hover:bg-yellow-600 hover:text-text cursor-pointer" />
                 </section>
                 <section ref={closeRef} id="titlebar-close">
-                    <X size={20} weight="bold" className="text-red-500 hover:text-red-700 cursor-pointer" alt="minimize" />
+                    <X size={17.5} weight="bold" className="w-full h-full text-red-500 p-2 hover:bg-red-700 hover:text-text cursor-pointer" />
                 </section>
             </section>
         </nav>

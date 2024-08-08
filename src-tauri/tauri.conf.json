@@ -71,7 +71,9 @@
         "resizable": true,
         "title": "prep-tastic",
         "width": 1280,
-        "height": 720
+        "height": 720,
+        "minWidth": 1280,
+        "minHeight": 720
       }
     ]
   }

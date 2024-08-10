@@ -54,7 +54,6 @@ const IconSidebar: React.FC<Props> = ({ linksTop, linksMiddle, linksBottom }) =>
                         {linksMiddle.map((linkItem, index) => {
                             const key = Object.keys(linkItem)[0];
                             const [icon, url] = linkItem[key];
-                            console.log(pathname, url, pathname == url)
                             return (
                                 <section className='relative overflow-visible flex items-center'>
                                     <Link key={index} href={url} className={`relative mb-2  ${pathname == url ? "text-text/40" : "text-text/20"} hover:text-text/40 group transition`}>
@@ -78,7 +77,6 @@ const IconSidebar: React.FC<Props> = ({ linksTop, linksMiddle, linksBottom }) =>
                         {linksBottom.map((linkItem, index) => {
                             const key = Object.keys(linkItem)[0];
                             const [icon, url] = linkItem[key];
-                            console.log(pathname, url, pathname == url)
                             return (
                                 <section className='relative overflow-visible flex items-center'>
                                     <Link key={index} href={url} className={`relative mb-2  ${pathname == url ? "text-text/40" : "text-text/20"} hover:text-text/40 group transition`}>
